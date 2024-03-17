@@ -17,6 +17,10 @@ public class ProductService {
         return productRepository.findAllProducts();
     }
 
+    public Product findProductById(String id){
+        return productRepository.findProductById(id);
+    }
+
     public boolean addProduct(String title, String brand, int price){
         return productRepository.createNewProduct(new Product(title,brand,price));
     }
